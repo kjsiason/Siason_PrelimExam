@@ -1,0 +1,13 @@
+---
+- hosts: ubuntu
+  roles:
+    - python
+    - java
+    - role: change_motd
+      vars:
+        motd: "Ansible Managed by Siason"
+    - role: user
+      vars:
+        username: "qkjsiason"
+        name: "Karl Justine Siason"
+
